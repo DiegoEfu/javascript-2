@@ -1,9 +1,9 @@
-document.getElementById('crear').addEventListener("submit", (event) => {
+document.getElementById('crear').addEventListener("click", (event) => {
     event.preventDefault();
-    crearNuevaTarea();
+    crearNuevaTarea(event);
 });
 
-const crearNuevaTarea = () => {
+const crearNuevaTarea = (event) => {
     const xhttp = new XMLHttpRequest();
 
     xhttp.open('POST', '', true);
