@@ -10,10 +10,14 @@ const crearNuevaTarea = () => {
     xhttp.send();
 
     xhttp.onreadystatechange = function(){
-        console.log(this.status);
         if(this.readyState == 4){
             let datos = JSON.parse(localStorage.getItem('tareas'));
-            const highestId = datos.reduce((highest=0, x) => x.id > highest ? x.id : highest);
+            let highestId = 0;
+
+            for(let i = 0; i < datos.length; i++){
+                highestId = datos[i].id > highestId ? datos[i].id : highestId;
+            }
+
             console.log(highestId);
             const hora = new Date();
 
