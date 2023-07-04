@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Diego Faria</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body class="container">
+    <h1 class="text-center">Lista de Tareas</h1>
+
+    <form method="post" class="d-flex row mb-2">
+        <div class="col-6">
+            <label for="nombre">Nombre de la Actividad:</label>
+            <input type="text" class="form-control" id="nombre" required>
+        </div>
+        
+        <div class="col-6">
+            <label for="descripcion">Descripción de la Actividad:</label>
+            <input type="text" class="form-control" id="descripcion" required>
+        </div>
+
+        <div class="col-12 mt-2">
+            <button class="btn btn-success w-100">Crear</button>
+        </div>
+    </form>
+
+    <div>
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Tarea</th>
+                    <th>Descripción</th>
+                    <th>Hora de Creación</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody id="res"></tbody>
+        </table>
+    </div>
+    <script src="js/cargar_datos.js"></script>
+    <script src="js/crear.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</body>
+</html>
